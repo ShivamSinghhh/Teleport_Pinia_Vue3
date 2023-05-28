@@ -1,12 +1,10 @@
 import { shallowMount } from '@vue/test-utils'
-import HelloWorld from '@/components/HelloWorld.vue'
+import TeleApp from '../../src/teleporting/TeleApp.vue'
 
-describe('HelloWorld.vue', () => {
-  it('renders props.msg when passed', () => {
-    const msg = 'new message'
-    const wrapper = shallowMount(HelloWorld, {
-      props: { msg }
-    })
+describe('TeleApp.vue', () => {
+  it('It should render Telecast', () => {
+    const msg = 'Teleport Example'
+    const wrapper = shallowMount(TeleApp)
     expect(wrapper.text()).toMatch(msg)
   })
 })

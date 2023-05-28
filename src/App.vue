@@ -1,10 +1,19 @@
 <template>
+  <TeleApp />
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
-  <router-view/>
+  <router-view />
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import TeleApp from "./teleporting/TeleApp.vue";
+export default defineComponent({
+  components: { TeleApp },
+});
+</script>
 
 <style>
 #app {
